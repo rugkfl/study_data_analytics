@@ -6,6 +6,7 @@ print(df_surgery.columns)
 print(df_surgery[['체중', '신장']])
 
 
+
 def caculate_bmi(params) :
     weight = params.loc['체중']
     height = params.loc['신장']
@@ -18,4 +19,9 @@ print(df_surgery)
 pass
 
 
+print(df_surgery['수술시간'])
+def convert_time(x) :
+    ampm, time = x.split()
+    if ampm > 60 :
+        hour = ampm // 60
 
